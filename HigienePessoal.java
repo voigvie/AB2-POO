@@ -1,0 +1,3 @@
+class HigienePessoal extends Product{
+    
+}
