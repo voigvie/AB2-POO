@@ -1,13 +1,16 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+import java.util.ArrayList;
 
-/**
- *
- * @author Giovanna
- */
-public class PagamentoComum {
+public class PagamentoComum implements Pagamento {
+
+    @Override
+    public void pagar(double total,ArrayList<Object> carrinho) {
+        System.out.println("\n-------------------------");
+        for (Object a : carrinho) {
+            System.out.println(a+"\n");
+        }
+        System.out.println("-------------------------");
+        System.out.println("Valor da compra \nR$:"+total+"\nTotal a ser pago \nR$:"+total);
+        
+    }
     
 }

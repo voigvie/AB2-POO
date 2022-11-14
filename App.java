@@ -9,6 +9,8 @@ public class App {
    public static void main(String[] args) {
       Market market = new Market();
       Scanner ler = new Scanner(System.in);
+      PagamentoComum pagamentoComum = new PagamentoComum();
+      PagamentoEMarket pagamentoEMarket = new PagamentoEMarket();
       ArrayList<Object> carrinho = new ArrayList<>();
       Section section;
       String res;
@@ -16,6 +18,7 @@ public class App {
       Food FoodSection;
       Hygiene HygieneSection;
       Cleaning CleaningSection;
+      double total = 0;
 
       Drinks drinks = new Drinks();
       drinks.addBebida(new Refrigerante("Coca-Cola", 5.80));
@@ -75,7 +78,8 @@ public class App {
        System.out.println("[3] Higiene Pessoal");
        System.out.println("[4] Limpeza");
        System.out.println("[5] Carrinho de Compras");
-       System.out.println("[6] Sair");
+       System.out.println("[6] Pagar");
+       System.out.println("[7] Sair");
        System.out.print("opção: ");
 
       while (true) {
@@ -83,15 +87,14 @@ public class App {
          int opc = Integer.parseInt(ler.next());
          switch (opc) {
             case 0:
-               System.out.println("Bem vindo(a), ao E-Market, seu supermecado online");
-               System.out.println("Selecione um número para começar suas compras:\n");
                System.out.println("------------MENU-------------");
                System.out.println("[1] Bebidas");
                System.out.println("[2] Alimentos");
                System.out.println("[3] Higiene Pessoal");
                System.out.println("[4] Limpeza");
                System.out.println("[5] Carrinho de Compras");
-               System.out.println("[6] Sair");
+               System.out.println("[6] Pagar");
+               System.out.println("[7] Sair");
                System.out.print("opção: ");
                break;
 
@@ -129,7 +132,7 @@ public class App {
                           if (DrinksSection.getBebidas().get(i) instanceof Suco) {
                               if (((Suco) DrinksSection.getBebidas().get(i)).marca.equals(res)) {
                                   carrinho.add(DrinksSection.getBebidas().get(i));
-
+                                  total += ((Suco) DrinksSection.getBebidas().get(i)).preco;
                               }
                           }
                       }
@@ -157,7 +160,7 @@ public class App {
                           if (DrinksSection.getBebidas().get(i) instanceof Refrigerante) {
                               if (((Refrigerante) DrinksSection.getBebidas().get(i)).marca.equals(res)) {
                                   carrinho.add(DrinksSection.getBebidas().get(i));
-
+                                  total += ((Refrigerante) DrinksSection.getBebidas().get(i)).preco;
                               }
                           }
                       }
@@ -186,7 +189,7 @@ public class App {
                      if (DrinksSection.getBebidas().get(i) instanceof Vinho) {
                         if(((Vinho)DrinksSection.getBebidas().get(i)).marca.equals(res)){
                            carrinho.add(DrinksSection.getBebidas().get(i));
-                           
+                           total += ((Vinho) DrinksSection.getBebidas().get(i)).preco;
                         }
                      }
                   }
@@ -234,7 +237,7 @@ public class App {
                           if (FoodSection.getAlimentos().get(i) instanceof Massa) {
                               if (((Massa) FoodSection.getAlimentos().get(i)).marca.equals(res)) {
                                   carrinho.add(FoodSection.getAlimentos().get(i));
-
+                                  total += ((Massa) FoodSection.getAlimentos().get(i)).preco;
                               }
                           }
                       }
@@ -262,7 +265,7 @@ public class App {
                           if (FoodSection.getAlimentos().get(i) instanceof Molho) {
                               if (((Molho) FoodSection.getAlimentos().get(i)).marca.equals(res)) {
                                   carrinho.add(FoodSection.getAlimentos().get(i));
-
+                                  total += ((Molho) FoodSection.getAlimentos().get(i)).preco;
                               }
                           }
                       }
@@ -290,6 +293,7 @@ public class App {
                           if (FoodSection.getAlimentos().get(i) instanceof Carne) {
                               if (((Carne) FoodSection.getAlimentos().get(i)).marca.equals(res)) {
                                   carrinho.add(FoodSection.getAlimentos().get(i));
+                                  total += ((Carne) FoodSection.getAlimentos().get(i)).preco;
 
                               }
                           }
@@ -338,6 +342,7 @@ public class App {
                           if (HygieneSection.getHigienePessoal().get(i) instanceof Sabonete) {
                               if (((Sabonete) HygieneSection.getHigienePessoal().get(i)).marca.equals(res)) {
                                   carrinho.add(HygieneSection.getHigienePessoal().get(i));
+                                  total += ((Sabonete) HygieneSection.getHigienePessoal().get(i)).preco;
 
                               }
                           }
@@ -366,6 +371,7 @@ public class App {
                           if (HygieneSection.getHigienePessoal().get(i) instanceof Shampoo) {
                               if (((Shampoo) HygieneSection.getHigienePessoal().get(i)).marca.equals(res)) {
                                   carrinho.add(HygieneSection.getHigienePessoal().get(i));
+                                  total += ((Shampoo) HygieneSection.getHigienePessoal().get(i)).preco;
 
                               }
                           }
@@ -394,6 +400,7 @@ public class App {
                           if (HygieneSection.getHigienePessoal().get(i) instanceof CremeDental) {
                               if (((CremeDental) HygieneSection.getHigienePessoal().get(i)).marca.equals(res)) {
                                   carrinho.add(HygieneSection.getHigienePessoal().get(i));
+                                  total += ((CremeDental) HygieneSection.getHigienePessoal().get(i)).preco;
 
                               }
                           }
@@ -442,6 +449,7 @@ public class App {
                           if (CleaningSection.getLimpeza().get(i) instanceof Detergente) {
                               if (((Detergente) CleaningSection.getLimpeza().get(i)).marca.equals(res)) {
                                   carrinho.add(CleaningSection.getLimpeza().get(i));
+                                  total += ((Detergente) CleaningSection.getLimpeza().get(i)).preco;
 
                               }
                           }
@@ -470,6 +478,7 @@ public class App {
                           if (CleaningSection.getLimpeza().get(i) instanceof AguaSanitaria) {
                               if (((AguaSanitaria) CleaningSection.getLimpeza().get(i)).marca.equals(res)) {
                                   carrinho.add(CleaningSection.getLimpeza().get(i));
+                                  total += ((AguaSanitaria) CleaningSection.getLimpeza().get(i)).preco;
 
                               }
                           }
@@ -481,7 +490,7 @@ public class App {
                   break;
 
                   case 3:
-                      section = market.getSection(4);
+                  section = market.getSection(4);
 
                   CleaningSection = ((Cleaning) section);
    
@@ -498,6 +507,7 @@ public class App {
                           if (CleaningSection.getLimpeza().get(i) instanceof Sabao) {
                               if (((Sabao) CleaningSection.getLimpeza().get(i)).marca.equals(res)) {
                                   carrinho.add(CleaningSection.getLimpeza().get(i));
+                                  total += ((Sabao) CleaningSection.getLimpeza().get(i)).preco;
 
                               }
                           }
@@ -516,6 +526,22 @@ public class App {
                 }
                 break;
             case 6:
+                System.out.println("\n------------PAGAR-------------");
+                System.out.println("[1] Pagamento Comum");
+                System.out.println("[2] Pagamento E-Market\n");
+
+                op = Integer.parseInt(ler.next());
+                switch (op) {
+                    case 1:
+                        pagamentoComum.pagar(total, carrinho);
+                        break;
+                    
+                    case 2:
+                        pagamentoEMarket.pagar(total, carrinho);
+                        break;
+                }
+            break;
+            case 7:
                System.exit(1);
                break;
          }

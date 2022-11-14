@@ -1,13 +1,16 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+import java.util.ArrayList;
 
-/**
- *
- * @author Giovanna
- */
-public class PagamentoEMarket {
+public class PagamentoEMarket implements Pagamento{
+
+    @Override
+    public void pagar(double total,ArrayList<Object> carrinho) {
+        double desc = total-(total*0.30);
+        System.out.println("\n-------------------------");
+        for (Object a : carrinho) {
+            System.out.println(a);
+        }
+        System.out.println("-------------------------\no");
+        System.out.println("Valor da compra \nR$:"+total+"\nTotal a ser pago \nR$:"+desc);
+    }
     
 }
