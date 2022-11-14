@@ -9,7 +9,7 @@ public class Shampoo extends HigienePessoal {
 
     @Override
     public String toString() {
-        return "Shampoo{" + "marca=" + marca + ", preco=" + preco + '}';
+        return "Shampoo " + marca + ", Preço: " + preco;
     }
     
 }

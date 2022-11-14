@@ -9,7 +9,7 @@ public class Sabao extends Limpeza {
 
     @Override
     public String toString() {
-        return "Sabao{" + "marca=" + marca + ", preco=" + preco + '}';
+        return "Sabão " + marca + ", Preço: " + preco;
     }
 
     

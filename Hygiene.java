@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class Hygiene {
+public class Hygiene extends Section {
     ArrayList<HigienePessoal> higiene = new ArrayList<>(); 
 
     void addHigienePessoal(HigienePessoal higienePessoal) {

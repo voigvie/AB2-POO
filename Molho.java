@@ -9,7 +9,7 @@ public class Molho extends Alimento{
 
     @Override
     public String toString() {
-        return "Molho{" + "marca=" + marca + ", preco=" + preco + '}';
+        return "Molho " + marca + ", Preço: " + preco;
     }
 
     
