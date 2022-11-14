@@ -1,16 +1,15 @@
-public class Molho extends Alimento{
+public class Shampoo extends HigienePessoal {
     String marca; 
     double preco;
 
-    public Molho(String marca, double preco) {
+    public Shampoo(String marca, double preco) {
         this.marca = marca;
         this.preco = preco;
     }
 
     @Override
     public String toString() {
-        return "Molho " + marca + ", Preço: " + preco;
+        return "Shampoo " + marca + ", Preço: " + preco;
     }
-
     
 }

@@ -9,7 +9,7 @@ public class Suco extends Bebida {
 
     @Override
     public String toString() {
-        return "Suco marca: " + marca + ", preco: " + preco;
+        return "Suco " + marca + ", Preço: " + preco;
     }
 
     
