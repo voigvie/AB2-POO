@@ -540,7 +540,7 @@ public class App {
                         pagamentoEMarket.pagar(total, carrinho);
                         break;
                 }
-            break;
+            
             case 7:
                System.exit(1);
                break;

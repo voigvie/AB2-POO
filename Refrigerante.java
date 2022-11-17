@@ -9,6 +9,6 @@ public class Refrigerante extends Bebida {
 
     @Override
     public String toString() {
-        return "Refrigerante " + marca + ", Preço: " + preco;
+        return "Refrigerante " + marca + ", Preço: R$" + preco;
     }
 }

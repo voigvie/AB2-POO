@@ -9,7 +9,7 @@ public class AguaSanitaria extends Limpeza {
 
     @Override
     public String toString() {
-        return "Água Sanitária " + marca + ", Preço: " + preco;
+        return "Água Sanitária " + marca + ", Preço: R$" + preco;
     }
 
 }

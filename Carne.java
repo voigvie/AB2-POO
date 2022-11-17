@@ -9,7 +9,7 @@ public class Carne extends Alimento{
 
     @Override
     public String toString() {
-        return "Carne " + marca + ", Preço: " + preco;
+        return "Carne " + marca + ", Preço: R$" + preco;
     }
 
 }

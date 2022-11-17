@@ -9,7 +9,7 @@ public class Massa extends Alimento {
 
     @Override
     public String toString() {
-        return "Massa " + marca + ", Preço: " + preco;
+        return "Massa " + marca + ", Preço: R$" + preco;
     }
 
     

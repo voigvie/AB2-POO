@@ -9,7 +9,7 @@ public class Detergente extends Limpeza{
 
     @Override
     public String toString() {
-        return "Deteregente " + marca + ", Preço: " + preco;
+        return "Deteregente " + marca + ", Preço: R$" + preco;
     }
 
     
