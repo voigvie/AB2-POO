@@ -3,7 +3,7 @@ import java.util.ArrayList;
 public class Food extends Section {
     ArrayList<Alimento> alimentos = new ArrayList<>();
 
-    void addAlimento(Alimento alimento){
+    public void addAlimento(Alimento alimento){
         alimentos.add(alimento);
     }
 
