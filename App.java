@@ -1,10 +1,5 @@
 import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.Map;
 import java.util.Scanner;
-
-import javax.swing.JOptionPane;
-
 public class App {
    public static void main(String[] args) {
       Market market = new Market();
@@ -542,6 +537,7 @@ public class App {
                 }
             
             case 7:
+               ler.close(); 
                System.exit(1);
                break;
          }
