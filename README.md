@@ -5,3 +5,6 @@ Repositório criado para depósito de código referente ao Projeto da dupla Giov
 # Funções do usuário 
 
 O usuário que busca economizar, escolhe em um menu simples e intuitivo qual produto deseja comprar, de determinada seção e categoria presente no supermecado, em seguida obtendo uma lista de marcas e preços referentes àquele produto. 
+
+# Diagrama UML 
+![UML png](https://user-images.githubusercontent.com/108762029/204004927-8ad8f674-b11b-4a50-bbaf-98a19ced4b35.png)
