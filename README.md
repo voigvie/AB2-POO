@@ -8,3 +8,13 @@ O usuário que busca economizar, escolhe em um menu simples e intuitivo qual pro
 
 # Diagrama UML 
 ![UML png](https://user-images.githubusercontent.com/108762029/204004927-8ad8f674-b11b-4a50-bbaf-98a19ced4b35.png)
+
+# Baixando a imagem Docker
+```
+docker pull rodrigo021/poo:latest
+```
+
+# Executando a imagem num container Docker
+```
+docker run -it -p 80:80 rodrigo021/poo:latest
+```
