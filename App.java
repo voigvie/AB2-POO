@@ -2,9 +2,10 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.Map;
 import java.util.Scanner;
+
 public class App {
    public static void main(String[] args) {
-      Market market = new Market();
+      Market market = Market.getInstance();
       Scanner ler = new Scanner(System.in);
       PagamentoComum pagamentoComum = new PagamentoComum();
       PagamentoEMarket pagamentoEMarket = new PagamentoEMarket();
@@ -537,9 +538,8 @@ public class App {
                         pagamentoEMarket.pagar(total, carrinho);
                         break;
                 }
-            
             case 7:
-               ler.close(); 
+               ler.close();
                System.exit(1);
                break;
          }
