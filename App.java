@@ -1,13 +1,9 @@
 import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.Map;
 import java.util.Scanner;
-
-import javax.swing.JOptionPane;
 
 public class App {
    public static void main(String[] args) {
-      Market market = new Market();
+      Market market = Market.getInstance();
       Scanner ler = new Scanner(System.in);
       PagamentoComum pagamentoComum = new PagamentoComum();
       PagamentoEMarket pagamentoEMarket = new PagamentoEMarket();
@@ -70,21 +66,24 @@ public class App {
       market.addSection(3, hygiene);
       market.addSection(4, cleaning);
 
-       System.out.println("Bem vindo(a), ao E-Market, seu supermecado online");
-       System.out.println("Selecione um número para começar suas compras:\n");
-       System.out.println("------------MENU-------------");
-       System.out.println("[1] Bebidas");
-       System.out.println("[2] Alimentos");
-       System.out.println("[3] Higiene Pessoal");
-       System.out.println("[4] Limpeza");
-       System.out.println("[5] Carrinho de Compras");
-       System.out.println("[6] Pagar");
-       System.out.println("[7] Sair");
-       System.out.print("opção: ");
+      System.out.println("Bem vindo(a), ao E-Market, seu supermecado online");
+      System.out.println("Selecione um número para começar suas compras:\n");
+      System.out.println("------------MENU-------------");
+      System.out.println("[1] Bebidas");
+      System.out.println("[2] Alimentos");
+      System.out.println("[3] Higiene Pessoal");
+      System.out.println("[4] Limpeza");
+      System.out.println("[5] Carrinho de Compras");
+      System.out.println("[6] Pagar");
+      System.out.println("[7] Sair");
+      System.out.print("opção: ");
 
       while (true) {
          int op;
-         int opc = Integer.parseInt(ler.next());
+         int opc = 0; 
+         if (ler.hasNext()) {
+            opc = Integer.parseInt(ler.next());
+         }
          switch (opc) {
             case 0:
                System.out.println("------------MENU-------------");
@@ -542,6 +541,7 @@ public class App {
                 }
             
             case 7:
+               ler.close();
                System.exit(1);
                break;
          }

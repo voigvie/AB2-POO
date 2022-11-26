@@ -1,3 +1,5 @@
 
 
-public abstract class Bebida extends Product {}
+public abstract class Bebida extends Product {
+    
+}

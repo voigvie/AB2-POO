@@ -4,7 +4,7 @@ import java.util.ArrayList;
 public class Drinks extends Section {
     ArrayList<Bebida> bebidas = new ArrayList<>(); 
 
-    void addBebida(Bebida bebida) {
+    public void addBebida(Bebida bebida) {
         bebidas.add(bebida);
     }
 

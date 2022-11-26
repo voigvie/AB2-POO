@@ -3,7 +3,7 @@ import java.util.ArrayList;
 public class Cleaning extends Section {
     ArrayList<Limpeza> clean = new ArrayList<>(); 
 
-    void addLimpeza(Limpeza limpeza) {
+    public void addLimpeza(Limpeza limpeza) {
         clean.add(limpeza);
     }
 
