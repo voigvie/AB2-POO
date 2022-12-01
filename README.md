@@ -17,5 +17,5 @@ docker pull rodrigo021/poo:latest
 
 ## Executando a imagem num container Docker
 ```
-docker run -it -p 80:80 rodrigo021/poo:latest
+docker run -it rodrigo021/poo
 ```
